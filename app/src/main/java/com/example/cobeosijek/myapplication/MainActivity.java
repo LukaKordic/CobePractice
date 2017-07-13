@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnLogin;
     Intent intent;
     String passValidate, emailValidate;
+    public static final String EMAIL_KEY = "e_mail";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             etInputPass.requestFocus();
         } else {
             intent = new Intent(getApplicationContext(), CarList.class);
+            intent.putExtra(EMAIL_KEY, email);
             startActivity(intent);
         }
     }
