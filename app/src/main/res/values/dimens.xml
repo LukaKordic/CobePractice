@@ -9,4 +9,5 @@
     <dimen name="car_img_width">100dp</dimen>
     <dimen name="car_img_height">100dp</dimen>
     <dimen name="car_text_margin_start">5dp</dimen>
+    <dimen name="car_details_textview_margin">10dp</dimen>
 </resources>

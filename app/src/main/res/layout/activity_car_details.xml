@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cobeosijek.myapplication.CarDetails">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container_details"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/tv_car_details_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_car_details_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_car_details_name"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/car_details_textview_margin"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_car_details_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_car_details_age"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/car_details_textview_margin"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_car_details_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_car_details_speed"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/car_details_textview_margin"
+        android:textAlignment="center" />
+</RelativeLayout>
