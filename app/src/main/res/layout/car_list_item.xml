@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/iv_car_img"
         android:layout_width="@dimen/car_img_width"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/car_img_height"
         android:contentDescription="@string/car_image_description" />
 
     <TextView
@@ -15,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/iv_car_img"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginStart="@dimen/car_text_margin_start" />
 
     <TextView
         android:id="@+id/tv_car_age"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_car_name"
         android:layout_toEndOf="@id/iv_car_img"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:layout_marginStart="@dimen/car_text_margin_start" />
 
 </RelativeLayout>

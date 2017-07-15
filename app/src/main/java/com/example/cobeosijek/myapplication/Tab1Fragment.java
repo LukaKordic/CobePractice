@@ -27,13 +27,13 @@ public class Tab1Fragment extends Fragment {
 
     private ArrayList<Car> loadCars() {
         ArrayList<Car> carArrayList = new ArrayList<>();
-        carArrayList.add(new Car("Audi A5", 2015));
-        carArrayList.add(new Car("Golf 6", 2014));
-        carArrayList.add(new Car("BMW i8", 2016));
-        carArrayList.add(new Car("Mercedes w201", 2015));
-        carArrayList.add(new Car("Audi A4", 2016));
-        carArrayList.add(new Car("Skoda", 2013));
-        carArrayList.add(new Car("Peugeot 206", 2000));
+        carArrayList.add(new Car("Audi A5", 2015, R.drawable.audi));
+        carArrayList.add(new Car("Golf 6", 2014, R.drawable.golf));
+        carArrayList.add(new Car("BMW i8", 2016, R.drawable.bmw));
+        carArrayList.add(new Car("Mercedes w201", 2015, R.drawable.mercedes));
+        carArrayList.add(new Car("Audi A4", 2016, R.drawable.audi4));
+        carArrayList.add(new Car("Skoda", 2013, R.drawable.skoda));
+        carArrayList.add(new Car("Peugeot 206", 2000, R.drawable.pezo));
         return carArrayList;
     }
 

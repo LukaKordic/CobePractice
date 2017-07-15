@@ -27,10 +27,9 @@ public class Tab2Fragment extends Fragment {
 
     private ArrayList<Car> loadCars() {
         ArrayList<Car> carArrayList = new ArrayList<>();
-        carArrayList.add(new Car("Audi A5", 2015));
-        carArrayList.add(new Car("Golf 6", 2014));
-        carArrayList.add(new Car("BMW i8", 2016));
-        carArrayList.add(new Car("Mercedes w201", 2015));
+        carArrayList.add(new Car("Audi A5", 2015, R.drawable.audi));
+        carArrayList.add(new Car("Golf 6", 2014, R.drawable.golf));
+        carArrayList.add(new Car("BMW i8", 2016, R.drawable.bmw));
         return carArrayList;
     }
 
