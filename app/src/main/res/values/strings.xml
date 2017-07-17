@@ -9,4 +9,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="tv_user_info_text">luka.kordic@cobeisfresh.com</string>
     <string name="car_image_description">Car image</string>
+    <string name="all_cars_title">All</string>
+    <string name="popular_cars_title">Popular</string>
+    <string name="DetailsActivityTitle">Details</string>
 </resources>

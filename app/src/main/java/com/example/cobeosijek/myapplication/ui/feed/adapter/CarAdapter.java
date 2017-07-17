@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myapplication;
+package com.example.cobeosijek.myapplication.ui.feed.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,25 +7,42 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cobeosijek.myapplication.R;
+import com.example.cobeosijek.myapplication.data_object.Car;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class CarAdapter extends BaseAdapter {
-    private ArrayList<Car> mCars;
+public class CarAdapter extends BaseAdapter {
 
-    public CarAdapter(ArrayList<Car> books) {
-        mCars = books;
+    private final List<Car> itemList = new ArrayList<>();
+
+    public void setItems(List<Car> items) {// ocisti i postavi
+        itemList.clear();
+        itemList.addAll(items);
+        notifyDataSetChanged();
+    }
+
+    public void addItems(List<Car> items) { // dodaje jos itema
+        itemList.addAll(items);
+        notifyDataSetChanged();
     }
 
     @Override
     public int getCount() {
-        return this.mCars.size();
+        return itemList.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return this.mCars.get(position);
+    public Car getItem(int position) {
+
+        if (position < getCount()) {
+            Car car = itemList.get(position);
+            return car != null ? car : new Car();
+        }
+
+        return new Car();
     }
 
     @Override
@@ -36,6 +53,7 @@ class CarAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder carViewHolder;
+
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             convertView = inflater.inflate(R.layout.car_list_item, parent, false);
@@ -44,16 +62,21 @@ class CarAdapter extends BaseAdapter {
         } else {
             carViewHolder = (ViewHolder) convertView.getTag();
         }
-        Car car = this.mCars.get(position);
+
+        Car car = getItem(position); //nikad nece biti null
+
         carViewHolder.tvCarName.setText(car.getCarName());
         carViewHolder.tvCarAge.setText(String.valueOf(car.getCarAge()));
-        Picasso.with(convertView.getContext()).load(car.getCarImg()).into(carViewHolder.ivCarImage);
+
+        Picasso.with(parent.getContext()).load(car.getCarImage()).into(carViewHolder.ivCarImage);
         return convertView;
     }
 
     private static class ViewHolder {
-        TextView tvCarName, tvCarAge;
-        ImageView ivCarImage;
+
+        private TextView tvCarName;
+        private TextView tvCarAge;
+        private ImageView ivCarImage;
 
         ViewHolder(View carView) {
             tvCarName = carView.findViewById(R.id.tv_car_name);

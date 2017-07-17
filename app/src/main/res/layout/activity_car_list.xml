@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cobeosijek.myapplication.CarList">
+    android:orientation="vertical"
+    tools:context="com.example.cobeosijek.myapplication.ui.feed.CarListActivity">
+
+    <!--<include layout="@layout/toolbar" />-->
 
     <TextView
-        android:id="@+id/tv_user_info"
+        android:id="@id/user_info"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tv_user_info_height"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@color/colorAccent"
         android:drawableStart="@mipmap/ic_launcher_round"
         android:gravity="center"
@@ -19,20 +20,16 @@
         android:textSize="@dimen/tv_user_info_text_size" />
 
     <android.support.design.widget.TabLayout
-        android:id="@+id/tabs"
+        android:id="@id/pager_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_user_info"
         android:background="@color/colorPrimary"
-        app:tabTextColor="@color/white"
-        app:tabSelectedTextColor="@color/white" />
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/container"
+        android:id="@id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tabs"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-
-</RelativeLayout>
+</LinearLayout>

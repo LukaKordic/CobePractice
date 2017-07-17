@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="user_info" type="id" />
+    <item name="pager_tabs" type="id" />
+    <item name="view_pager" type="id" />
+    <item name="item_list" type="id" />
+    <item name="back_button" type="id"/>
+    <item name="activity_title" type="id" />
+    <item name="container_details" type="id"/>
+    <item name="tv_car_details_name" type="id"/>
+    <item name="tv_car_details_speed" type="id"/>
+    <item name="tv_car_details_registration" type="id"/>
+    <item name="tv_input_email_pass" type="id"/>
+    <item name="et_input_email" type="id"/>
+    <item name="et_input_pass" type="id"/>
+    <item name="btn_login" type="id"/>
+    <item name="iv_car_img" type="id"/>
+    <item name="tv_car_name" type="id"/>
+    <item name="tv_car_age" type="id"/>
+
+</resources>

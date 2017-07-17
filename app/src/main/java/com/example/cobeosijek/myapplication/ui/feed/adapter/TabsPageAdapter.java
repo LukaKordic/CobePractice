@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myapplication;
+package com.example.cobeosijek.myapplication.ui.feed.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,9 +17,10 @@ public class TabsPageAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-    void addFragment(Fragment fragment, String title) {
+    public void addFragment(Fragment fragment, String title) {
         fragmentList.add(fragment);
         fragmentTitleList.add(title);
+        notifyDataSetChanged();
     }
 
     @Override
