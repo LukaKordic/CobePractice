@@ -38,7 +38,7 @@ public class CarDetailsPagerAdapter extends PagerAdapter {
         LayoutInflater inflater = LayoutInflater.from(container.getContext());
         View itemView = inflater.inflate(R.layout.details_pager_item, container, false);
 
-        ImageView carImage = itemView.findViewById(R.id.iv_pager_item);
+        ImageView carImage = itemView.findViewById(R.id.pager_item);
         Picasso.with(itemView.getContext()).load(carImageList.get(position)).into(carImage);
 
         container.addView(itemView);

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.cobeosijek.myapplication.ui.feed.CarListActivity">
 
-    <!--<include layout="@layout/toolbar" />-->
+
 
     <TextView
         android:id="@id/user_info"

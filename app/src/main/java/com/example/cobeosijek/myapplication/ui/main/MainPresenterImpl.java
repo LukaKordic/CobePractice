@@ -5,9 +5,6 @@ import java.util.regex.Pattern;
 import static com.example.cobeosijek.myapplication.common.constants.Constants.EMAIL_REGEX;
 import static com.example.cobeosijek.myapplication.common.constants.Constants.MINIMUM_PASSWORD_LENGTH;
 
-/**
- * Created by cobeosijek on 17/07/2017.
- */
 
 public class MainPresenterImpl implements MainPresenter {
 

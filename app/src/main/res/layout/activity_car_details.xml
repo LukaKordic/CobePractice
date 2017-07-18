@@ -12,7 +12,7 @@
         android:layout_height="250dp" />
 
     <TextView
-        android:id="@id/tv_car_details_name"
+        android:id="@id/car_details_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -20,7 +20,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_car_details_age"
+        android:id="@id/car_details_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/car_details_textview_margin"
@@ -29,7 +29,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@id/tv_car_details_speed"
+        android:id="@id/car_details_speed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/car_details_textview_margin"
@@ -38,7 +38,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@id/tv_car_details_registration"
+        android:id="@id/car_details_registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/car_details_textview_margin"

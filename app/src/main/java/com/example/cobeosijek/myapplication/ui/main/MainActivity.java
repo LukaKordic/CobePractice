@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final MainPresenter presenter = new MainPresenterImpl();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         presenter.setView(this);
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setUpUI() {
-        emailInput = (EditText) findViewById(R.id.et_input_email);
-        passwordInput = (EditText) findViewById(R.id.et_input_pass);
+        emailInput = (EditText) findViewById(R.id.input_email);
+        passwordInput = (EditText) findViewById(R.id.input_pass);
         loginButton = (Button) findViewById(R.id.btn_login);
     }
 

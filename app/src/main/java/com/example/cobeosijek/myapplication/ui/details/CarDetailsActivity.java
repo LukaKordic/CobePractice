@@ -41,10 +41,10 @@ public class CarDetailsActivity extends AppCompatActivity {
     }
 
     private void setupViews() {
-        carName = (TextView) findViewById(R.id.tv_car_details_name);
-        carAge = (TextView) findViewById(R.id.tv_car_details_age);
-        carSpeed = (TextView) findViewById(R.id.tv_car_details_speed);
-        carRegistration = (TextView) findViewById(R.id.tv_car_details_registration);
+        carName = (TextView) findViewById(R.id.car_details_name);
+        carAge = (TextView) findViewById(R.id.car_details_age);
+        carSpeed = (TextView) findViewById(R.id.car_details_speed);
+        carRegistration = (TextView) findViewById(R.id.car_details_registration);
     }
 
     private void displayInfo() {

@@ -16,8 +16,8 @@ import com.squareup.picasso.Picasso;
 
 public class CarHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    private final TextView tvCarName;
-    private final TextView tvCarAge;
+    private final TextView CarName;
+    private final TextView CarAge;
     private final ImageView ivCarImage;
 
     private final ItemClickListener itemClickListener;
@@ -27,9 +27,9 @@ public class CarHolder extends RecyclerView.ViewHolder implements View.OnClickLi
         super(itemView);
         this.itemClickListener = itemClickListener;
 
-        tvCarName = itemView.findViewById(R.id.tv_car_name);
-        tvCarAge = itemView.findViewById(R.id.tv_car_age);
-        ivCarImage = itemView.findViewById(R.id.iv_car_img);
+        CarName = itemView.findViewById(R.id.car_name);
+        CarAge = itemView.findViewById(R.id.car_age);
+        ivCarImage = itemView.findViewById(R.id.car_img);
     }
 
     public void setCar(Car car) {
@@ -39,10 +39,10 @@ public class CarHolder extends RecyclerView.ViewHolder implements View.OnClickLi
     public void showCarDetails(Car car) {
         itemView.setOnClickListener(this);
 
-        tvCarName.setText(car.getCarName());
-        tvCarAge.setText(String.valueOf(car.getCarAge()));
+        CarName.setText(car.getCarName());
+        CarAge.setText(String.valueOf(car.getCarAge()));
 
-        // TODO: 18/07/2017 check for index out of bounds
+        if(car.getCarImageList().size() > 0)
         Picasso.with(itemView.getContext()).load(car.getCarImage(0)).into(ivCarImage);
     }
 

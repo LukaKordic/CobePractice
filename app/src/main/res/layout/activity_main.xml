@@ -6,10 +6,10 @@
     android:orientation="vertical"
     tools:context="com.example.cobeosijek.myapplication.ui.main.MainActivity">
 
-    <!--<include layout="@layout/toolbar" />-->
+
 
     <TextView
-        android:id="@id/tv_input_email_pass"
+        android:id="@id/input_email_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_input_email_pass_text"
@@ -18,7 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@id/et_input_email"
+        android:id="@id/input_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_mail"
@@ -28,7 +28,7 @@
         android:singleLine="true" />
 
     <EditText
-        android:id="@id/et_input_pass"
+        android:id="@id/input_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_pass"
