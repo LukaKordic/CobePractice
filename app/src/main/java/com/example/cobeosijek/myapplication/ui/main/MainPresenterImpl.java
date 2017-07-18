@@ -16,7 +16,6 @@ public class MainPresenterImpl implements MainPresenter {
     @Override
     public void setView(MainView mainView) {
         this.mainView = mainView;
-
     }
 
     @Override

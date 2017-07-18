@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.cobeosijek.myapplication.ui.details.CarDetailsActivity">
 
-    <!--<include layout="@layout/toolbar" />-->
-
     <android.support.v4.view.ViewPager
         android:id="@id/container_details"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="250dp" />
 
     <TextView
         android:id="@id/tv_car_details_name"
@@ -21,8 +17,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:hint="Car name"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_car_details_age"
@@ -31,8 +26,7 @@
         android:layout_marginTop="@dimen/car_details_textview_margin"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:textStyle="bold"
-        android:hint="Car age"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@id/tv_car_details_speed"
@@ -41,8 +35,7 @@
         android:layout_marginTop="@dimen/car_details_textview_margin"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:textStyle="bold"
-        android:hint="Car speed"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@id/tv_car_details_registration"
@@ -51,6 +44,5 @@
         android:layout_marginTop="@dimen/car_details_textview_margin"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:textStyle="bold"
-        android:hint="Car registration"/>
+        android:textStyle="bold" />
 </LinearLayout>

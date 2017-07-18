@@ -11,18 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.cobeosijek.myapplication.R;
 import com.example.cobeosijek.myapplication.common.constants.Constants;
+import com.example.cobeosijek.myapplication.common.utils.DataUtils;
 import com.example.cobeosijek.myapplication.data_object.Car;
 import com.example.cobeosijek.myapplication.ui.details.CarDetailsActivity;
-import com.example.cobeosijek.myapplication.R;
-import com.example.cobeosijek.myapplication.common.utils.DataUtils;
 import com.example.cobeosijek.myapplication.ui.feed.adapter.CarRecyclerAdapter;
 import com.example.cobeosijek.myapplication.ui.listener.ItemClickListener;
 
-import java.io.Serializable;
 
-
-public class PopularCarsFragment extends Fragment implements ItemClickListener, Serializable {
+public class PopularCarsFragment extends Fragment implements ItemClickListener {
 
     private final CarRecyclerAdapter carRecyclerAdapter = new CarRecyclerAdapter();
 
@@ -49,7 +47,7 @@ public class PopularCarsFragment extends Fragment implements ItemClickListener, 
     @Override
     public void onItemClick(Car car) {
         Intent intent = new Intent(getActivity(), CarDetailsActivity.class);
-        intent.putExtra(Constants.KEY_CAR, (Serializable) car);
+        intent.putExtra(Constants.KEY_CAR, car);
         startActivity(intent);
     }
 }

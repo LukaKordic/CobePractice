@@ -29,11 +29,6 @@ public class CarRecyclerAdapter extends RecyclerView.Adapter<CarHolder> {
         notifyDataSetChanged();
     }
 
-    public void addItems(List<Car> items) { // dodaje jos itema
-        itemList.addAll(items);
-        notifyDataSetChanged();
-    }
-
     @Override
     public CarHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.car_list_item, parent, false);

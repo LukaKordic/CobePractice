@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText passwordInput;
     private Button loginButton;
 
-    private MainPresenter presenter = new MainPresenterImpl();
+    private final MainPresenter presenter = new MainPresenterImpl();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void showPasswordError() {
         passwordInput.setError(Constants.PASSWORD_ERROR);
         passwordInput.requestFocus();
+
+        loginButton.setOnClickListener(this);
     }
 
     @Override

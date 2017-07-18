@@ -50,7 +50,7 @@ public class AllCarsFragment extends Fragment implements ItemClickListener, Seri
     @Override
     public void onItemClick(Car car) {
         Intent intent = new Intent(getActivity(), CarDetailsActivity.class);
-        intent.putExtra(Constants.KEY_CAR, (Serializable) car);
+        intent.putExtra(Constants.KEY_CAR, car);
         startActivity(intent);
     }
 }

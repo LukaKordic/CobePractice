@@ -1,11 +1,14 @@
 package com.example.cobeosijek.myapplication.ui.feed.adapter;
 
 import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 
-import com.example.cobeosijek.myapplication.data_object.Car;
+import com.example.cobeosijek.myapplication.R;
+import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,14 +17,38 @@ import java.util.List;
 
 public class CarDetailsPagerAdapter extends PagerAdapter {
 
-    private final List<Car> carList = new ArrayList<>();
+    private final List<String> carImageList;
+
+    public CarDetailsPagerAdapter(List<String> carImageList) {
+        this.carImageList = carImageList;
+    }
+
     @Override
     public int getCount() {
-        return 0;
+        return carImageList.size();
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return false;
+        return view == object;
+    }
+
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+        LayoutInflater inflater = LayoutInflater.from(container.getContext());
+        View itemView = inflater.inflate(R.layout.details_pager_item, container, false);
+
+        ImageView carImage = itemView.findViewById(R.id.iv_pager_item);
+        Picasso.with(itemView.getContext()).load(carImageList.get(position)).into(carImage);
+
+        container.addView(itemView);
+        return itemView;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        if (object instanceof View) {
+            container.removeView((View) object);
+        }
     }
 }

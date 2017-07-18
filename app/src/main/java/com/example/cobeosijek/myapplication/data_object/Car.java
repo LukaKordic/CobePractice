@@ -2,53 +2,42 @@ package com.example.cobeosijek.myapplication.data_object;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Car implements Serializable {
 
     private String carName;
     private int carAge;
-    private String carImage;
+    private List<String> carImages = new ArrayList<>();
     private int carSpeed;
     private String carRegistration;
 
-    public int getCarSpeed() {
-        return carSpeed;
+    public Car(String carName, int carAge, List<String> carImage, int carSpeed, String carRegistration) {
+        this.carName = carName;
+        this.carAge = carAge;
+        this.carImages = carImage;
+        this.carSpeed = carSpeed;
+        this.carRegistration = carRegistration;
     }
 
-    public void setCarSpeed(int carSpeed) {
-        this.carSpeed = carSpeed;
+    public Car() {
+    }
+
+    public int getCarSpeed() {
+        return carSpeed;
     }
 
     public String getCarRegistration() {
         return carRegistration;
     }
 
-    public void setCarRegistration(String carRegistration) {
-        this.carRegistration = carRegistration;
+    public String getCarImage(int position) {
+        return carImages.get(position);
     }
 
-    public Car(String carName, int carAge, String carImage, int carSpeed, String carRegistration) {
-        this.carName = carName;
-        this.carAge = carAge;
-        this.carImage = carImage;
-        this.carSpeed = carSpeed;
-        this.carRegistration = carRegistration;
-    }
-
-    public Car() {
-
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
-
-    public void setCarAge(int carAge) {
-        this.carAge = carAge;
-    }
-
-    public void setCarImage(String carImage) {
-        this.carImage = carImage;
+    public List<String> getCarImageList() {
+        return carImages;
     }
 
     public String getCarName() {
@@ -57,9 +46,5 @@ public class Car implements Serializable {
 
     public int getCarAge() {
         return carAge;
-    }
-
-    public String getCarImage() {
-        return carImage;
     }
 }

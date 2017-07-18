@@ -12,8 +12,5 @@ public class Constants {
     public static final String KEY_CAR = "CAR";
     public static final String KEY_EMAIL = "EMAIL";
 
-    public static final int TYPE_POPULAR = 1;
-
-
     public static final String EMAIL_REGEX = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +  "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" + "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+";
 }

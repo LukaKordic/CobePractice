@@ -17,5 +17,6 @@
     <item name="iv_car_img" type="id"/>
     <item name="tv_car_name" type="id"/>
     <item name="tv_car_age" type="id"/>
+    <item name="iv_pager_item" type="id"/>
 
 </resources>
